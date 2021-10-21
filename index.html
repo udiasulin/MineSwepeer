@@ -7,7 +7,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <script src="app.js"></script>
+<body onload=init()>
+    <body onload="init()">
+    <section id="container">
+        <h2>Mine sweeper</h2>
+        <div class="board-container"></div>
+        <button onclick="difficulty(this)">Easy</button>
+        <button onclick="difficulty(this)">Medium</button>
+        <button onclick="difficulty(this)">Hard</button>
+    </section>
+    <script src="main.js"></script>
+    <script src="secondery.js"></script>
 </body>
 </html>
