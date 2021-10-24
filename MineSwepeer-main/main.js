@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function gameOver(square) {
         reset()
         emoji.innerText = '😭';
-        result.innerHTML = '<p>BOOM! Game Over!</p>'
+        result.innerHTML = '<p>☠️ BOOM! Game Over! ☠️</p>'
         isGameOver = true
         clearInterval(timer);
 

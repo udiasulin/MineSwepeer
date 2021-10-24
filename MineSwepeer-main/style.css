@@ -2,6 +2,10 @@
     box-sizing: content-box;
 }
 
+html,body{
+    height: 99%;
+    background: radial-gradient(circle, rgba(17,54,83,1) 0%, rgba(13,30,46,1) 100%);
+}
 
 .container {
     width: 48rem;
@@ -11,85 +15,99 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 5px solid;
-    background-color: #dcd6bc;
-    border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
+    background-color: rgba(0, 0, 0, 0.438);
+    border-radius: 25px;
+    border: 2px solid white;
   }
   
   .board{
-      border: 5px solid;
-      border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
       box-sizing: border-box;
-      background-color: #dcd6bc;
       display: flex;
       justify-content: space-between;
       height: 7vh;
+      width: 60%;
+      margin-left: 20%;
+      margin-top: 2%;
    }
 
    .flagSpan ,#emoji ,#timer{
-    border: 3px solid;
-    border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
-    padding: 6px 15px;
+    border: 3px solid white;
+    border-radius: 15px;
+    padding: 10px 15px;
     font-size: 29px;
+    background-color: rgba(0, 0, 0, 0.185);
+    color: white;
  }
 
  
   .grid {
-    height: 400px;
-    width: 400px;
+    height: 450px;
+    width: 450px;
     display: flex;
     flex-wrap: wrap;
     margin-left: 21%;
-    margin-top: 20px;
-    border: 10px solid #dcd6bc;
+    margin-top: 80px;
+    border: 2px solid #e7eae700;
     margin-bottom: 10px;
+    gap: 5px;
   }
   
   div {
     font-size: 25px;
     text-align: center;
     font-family: 'Roboto Mono', monospace;
+    
   }
 
   .valid {
     height: 40px;
     width: 40px;
-    border: 5px solid;
-    border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
+    border: 2px solid;
     box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #7cc7fd;
   }
   
+
+  .valid:active , .mine:active{
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
   .checked {
     height: 40px;
     width: 40px;
-    border: 2px solid;
-    background-color: #cecab7;
-    border-color: #9c998d;
+    background-color: #ebb630;
+    border-radius: 5px;
     box-sizing: border-box;
   }
   
   .mine {
     height: 40px;
     width: 40px;
-    border: 5px solid;
-    border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
+    border: 2px solid;
     box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #7cc7fd;
   }
   
+
+  
   .one {
-    color: #e76346;
+    color: #e9441f;
   }
   
   .two {
-    color: #4199d3;
+    color: #059afd;
   }
   
   .three {
-    color: #57da59;
+    color: #0dff11;
   }
   
   .four{
-    color: #bb41d3;
+    color: #d400ff;
   }
   
   #result {
@@ -98,39 +116,43 @@
 
   #result  > p{
     margin-top: 4%;
-    color: #000000;
+    margin-left: 2%;
+    color: white;
     font-size: 2em;
   }
 
   .resetBtn{
       position: absolute;
-      top: 10%;
-      left: 28em;
-      width: 22rem;
+      top: 12%;
+      left: 39vw;
+      width: 29rem;
       height: 2rem;
-      border: 5px solid;
-      border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
-      background-color: #cecab7;
+      border: 2px solid;
+      border-radius: 25px;
+      border-color: white;
+      background-color: #0e0d0921;
       font-weight: 700;
       font-size: 28px;
       letter-spacing: 8px;
+      color: white;
     }
 
 
 
     @media all and (min-width: 768px) and (max-width: 1024px) {
         .container{
-            margin-left: 10%;
+            margin-left: 13%;
             box-sizing: content-box;
         }
         .resetBtn{
-            left: 17rem;
-            top: 120px;
+            left: 19.5rem;
+            top: 125px;
             width: 25.5rem;
 
           }
           .flagSpan ,#emoji ,#timer{
-            padding: 15px 5px;
+            padding: 4px 4px;
+            height: 3rem;
          }
      }
 
@@ -144,17 +166,29 @@
 
         .grid{
             margin-left: 18%;
+            margin-top: 5%;
         }
 
         .resetBtn{
-            top: 68%;
-            left: 3em;
+            top: 65%;
+            left: 3.5em;
             width: 72%;
             height: 5%;
           }
 
           .flagSpan ,#emoji ,#timer{
-            padding: 1px 1px;
+            padding: 2px 2px;
+         }
+
+         #result > P{
+            font-size: 45PX;
+            margin-top: 1%;
+          }
+          .board{
+            width: 80%;
+            margin-top: 2%;
+            margin-left: 10%;
+    
          }
      }
 
@@ -162,29 +196,41 @@
      
 @media all and (max-width: 480px) { 
     .container{
-        margin-left: 0%;
+        margin-left: 4%;
         width: 22rem;
         height: 38rem;
     }
 
+    .board{
+        width: 80%;
+        margin-top: 5%;
+        margin-left: 10%;
+
+     }
+
     .grid{
         margin-bottom: 80%;
-        margin-left: 8%;
-        width: 310px;
+        margin-left: 5%;
+        width: 320px;
         border: none;
     }
     
 
     .resetBtn{
-        top: 65%;
-        left: 2em;
-        width: 68%;
+        top: 82%;
+        left: 45px;
+        width: 75%;
         height: 5%;
       }
 
       #result {
         position: relative;
-        bottom: 23%;
+        bottom: 45%;
+    }
+
+    
+    #result > P{
+      font-size: 25PX;
     }
 
       .flagSpan ,#emoji ,#timer{
@@ -193,20 +239,20 @@
      }
 
      .valid {
-        height: 30px;
-        width: 30px;
+        height: 27px;
+        width: 27px;
 
       }
       
       .checked {
-        height: 30px;
-        width: 30px;
+        height: 27px;
+        width: 27px;
 
       }
       
       .mine {
-        height: 30px;
-        width: 30px;
+        height: 27px;
+        width: 27px;
       }
 
       div {
